@@ -1,0 +1,24 @@
+{
+  "name": "body-cosmetology-quiz",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Квиз по подбору аппаратных процедур для тела (HTML/CSS/JS)",
+  "scripts": {
+    "dev": "python3 -m http.server 5173",
+    "start": "python3 -m http.server 5173",
+    "check": "node --check src/js/app.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "quiz",
+    "cosmetology",
+    "body",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Polina",
+  "license": "MIT"
+}
