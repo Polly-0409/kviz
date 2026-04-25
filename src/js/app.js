@@ -1,6 +1,39 @@
 (function () {
   const questions = [
     {
+      id: "ageGroup",
+      title: "Укажите Ваш возраст",
+      subtitle: "Это обязательный шаг перед подбором программы.",
+      options: [
+        { id: "age18to25", label: "18-25 лет" },
+        { id: "age26to35", label: "26-35 лет" },
+        { id: "age36to45", label: "36-45 лет" },
+        { id: "age46plus", label: "46+ лет" }
+      ]
+    },
+    {
+      id: "heightRange",
+      title: "Укажите Ваш рост",
+      subtitle: "Это нужно для более точной оценки формата курса.",
+      options: [
+        { id: "heightUnder160", label: "До 160 см" },
+        { id: "height160to170", label: "160-170 см" },
+        { id: "height171to180", label: "171-180 см" },
+        { id: "height181plus", label: "181+ см" }
+      ]
+    },
+    {
+      id: "weightRange",
+      title: "Укажите Ваш вес",
+      subtitle: "Это обязательный шаг для персонализации рекомендаций.",
+      options: [
+        { id: "weightUnder55", label: "До 55 кг" },
+        { id: "weight56to70", label: "56-70 кг" },
+        { id: "weight71to85", label: "71-85 кг" },
+        { id: "weight86plus", label: "86+ кг" }
+      ]
+    },
+    {
       id: "goal",
       title: "Какая у Вас главная цель?",
       subtitle: "Выберите наиболее приоритетный результат.",
@@ -131,7 +164,7 @@
   const procedures = [
     {
       id: "lpg",
-      name: "LPG-массаж",
+      name: "LPG - вакуумно-роликовый массаж",
       description:
         "Роллерно-вакуумная методика для коррекции контуров тела, уменьшения целлюлита и улучшения микроциркуляции.",
       indications: ["Локальные жировые отложения", "Целлюлит", "Снижение тонуса кожи"],
@@ -225,6 +258,55 @@
         supportNo: 2,
         supportMaybe: 2,
         supportYes: 1
+      }
+    },
+    {
+      id: "endosphere",
+      name: "Эндосфера",
+      description:
+        "Компрессионно-микровибрационная методика для лифтинга тканей, уменьшения отечности и визуального выравнивания рельефа кожи.",
+      indications: ["Снижение тонуса кожи", "Пастозность и отечность", "Целлюлит средней/выраженной степени"],
+      limitations: ["Беременность", "Острые тромбозы и тромбофлебиты", "Обострение хронических заболеваний"],
+      expectedEffect: "Более упругая кожа, уменьшение отечности и улучшение контуров тела.",
+      sessionDurationMin: 50,
+      baseSessions: 10,
+      sessionsRange: [8, 14],
+      baseFrequencyPerWeek: 2,
+      strengths: {
+        fatReduction: 2,
+        celluliteReduction: 4,
+        liftAndTone: 5,
+        reduceSwelling: 5,
+        skinQuality: 3,
+        abdomenSides: 2,
+        thighsButtocks: 4,
+        armsBack: 3,
+        multipleZones: 4,
+        fullBody: 5,
+        mild: 2,
+        moderate: 4,
+        advanced: 4,
+        toneGood: 2,
+        toneReduced: 4,
+        toneLow: 5,
+        celluliteNone: 1,
+        celluliteMid: 4,
+        celluliteStrong: 5,
+        swellingNo: 1,
+        swellingSometimes: 4,
+        swellingOften: 5,
+        gentle: 2,
+        active: 4,
+        balanced: 5,
+        fastRecovery: 2,
+        normalRecovery: 3,
+        intenseRecovery: 4,
+        mono: 3,
+        combo: 4,
+        maxCombo: 5,
+        supportNo: 1,
+        supportMaybe: 3,
+        supportYes: 4
       }
     },
     {
@@ -323,55 +405,6 @@
         supportNo: 2,
         supportMaybe: 3,
         supportYes: 3
-      }
-    },
-    {
-      id: "pressotherapy",
-      name: "Прессотерапия",
-      description:
-        "Лимфодренажная процедура для уменьшения отёков, лёгкости в теле и поддержки результатов других методик.",
-      indications: ["Отёчность", "Лимфостаз", "Чувство тяжести в ногах"],
-      limitations: ["Сердечно-сосудистая недостаточность", "Тромбоз", "Острые воспалительные процессы"],
-      expectedEffect: "Снижение отёков, облегчение самочувствия и поддержка антицеллюлитного курса.",
-      sessionDurationMin: 35,
-      baseSessions: 12,
-      sessionsRange: [8, 16],
-      baseFrequencyPerWeek: 2,
-      strengths: {
-        fatReduction: 1,
-        celluliteReduction: 2,
-        liftAndTone: 1,
-        reduceSwelling: 5,
-        skinQuality: 1,
-        abdomenSides: 1,
-        thighsButtocks: 3,
-        armsBack: 2,
-        multipleZones: 4,
-        fullBody: 4,
-        mild: 4,
-        moderate: 3,
-        advanced: 2,
-        toneGood: 1,
-        toneReduced: 2,
-        toneLow: 2,
-        celluliteNone: 1,
-        celluliteMid: 2,
-        celluliteStrong: 2,
-        swellingNo: 2,
-        swellingSometimes: 4,
-        swellingOften: 5,
-        gentle: 5,
-        active: 1,
-        balanced: 3,
-        fastRecovery: 4,
-        normalRecovery: 3,
-        intenseRecovery: 1,
-        mono: 2,
-        combo: 4,
-        maxCombo: 4,
-        supportNo: 1,
-        supportMaybe: 4,
-        supportYes: 5
       }
     },
     {
@@ -646,6 +679,9 @@
     else if (answers.condition === "moderate") bonus += 1;
     if (answers.timeline === "urgent") bonus += 1;
     if (answers.programType === "maxCombo") bonus += 1;
+    if (answers.weightRange === "weight71to85") bonus += 1;
+    if (answers.weightRange === "weight86plus") bonus += 2;
+    if (answers.ageGroup === "age46plus") bonus += 1;
     return bonus;
   }
 
