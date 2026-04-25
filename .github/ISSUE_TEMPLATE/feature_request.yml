@@ -1,0 +1,36 @@
+name: Feature request
+description: Предложить улучшение или новую функцию
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: Опишите идею как можно конкретнее.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Какую проблему решает фича?
+      placeholder: Какая боль у пользователя или бизнеса?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Предлагаемое решение
+      placeholder: Что именно нужно добавить/изменить?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Альтернативы
+      placeholder: Какие варианты рассматривались?
+
+  - type: textarea
+    id: ui
+    attributes:
+      label: Примечания по UI/UX
+      placeholder: Если есть, приложите референсы/скриншоты.

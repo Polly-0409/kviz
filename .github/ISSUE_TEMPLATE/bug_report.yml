@@ -1,0 +1,47 @@
+name: Bug report
+description: Сообщить о баге в квизе
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Спасибо! Заполните поля ниже, чтобы мы быстрее воспроизвели проблему.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Краткое описание проблемы
+      placeholder: Что не работает?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги для воспроизведения
+      placeholder: |
+        1. Открыть ...
+        2. Нажать ...
+        3. Увидеть ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ожидаемое поведение
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Фактическое поведение
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Браузер и версия
+      placeholder: e.g. Chrome 135, Safari 17
